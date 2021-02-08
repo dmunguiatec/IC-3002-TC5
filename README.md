@@ -3,7 +3,7 @@
 Considere el siguiente problema computacional:
 
 **Problema**: Ordenar una secuencia de números enteros.
-* **Entradas**: ![](https://latex.codecogs.com/png.latex?%28A%2Cn%29%) tal que ![](https://latex.codecogs.com/png.latex?%24%20A%20%3D%20%28a_1%2C%20a_2%2C%20%5Cdots%2C%20a_n%7Ca_k%20%5Cin%20%5Cmathbb%7BZ%7D%29%20%5Cland%20n%20%3D%20%7CA%7C)
+* **Entradas**: ![](https://latex.codecogs.com/png.latex?%28A%2Cn%29) tal que ![](https://latex.codecogs.com/png.latex?A%20%3D%20%28a_1%2C%20a_2%2C%20%5Cdots%2C%20a_n%7Ca_k%20%5Cin%20%5Cmathbb%7BZ%7D%29%20%5Cland%20n%20%3D%20%7CA%7C)
 * **Salidas**: La secuencia ![](https://latex.codecogs.com/png.latex?A) ordenada de manera tal que ![](https://latex.codecogs.com/png.latex?%5Cunderset%7B0%20%5Cleq%20i%20%3C%20j%20%3C%20n%7D%20%7B%5Cforall%20i%2C%20j%7D%20%3A%20a_i%20%5Cleq%20a_j)
 
 
