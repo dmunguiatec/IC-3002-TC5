@@ -1,6 +1,6 @@
 import big_o
 from big_o import complexities as cmpl
-import gnuplotlib as gp
+import importlib
 import math
 import numpy as np
 from random import shuffle
@@ -13,8 +13,11 @@ from burbuja import burbuja, burbuja_optimizado
 def _graficar(fitted, titulo):
     xs = fitted['measures']
     ys = fitted['times']
-    gp.plot(xs, ys, _with='lines', terminal='dumb 60,30',
-            unset='grid', title=titulo, xlabel='n', ylabel='tiempo')
+
+    if importlib.util.find_spec('gnuplotlib') is not None:
+        import gnuplotlib as gp
+        gp.plot(xs, ys, _with='lines', terminal='dumb 60,30',
+                unset='grid', title=titulo, xlabel='n', ylabel='tiempo')
 
     for k, v in fitted.items():
         if isinstance(k, big_o.complexities.ComplexityClass):
@@ -28,8 +31,11 @@ def _comparar_curvas(fitted_a, fitted_b):
     ys_a = fitted_a['times']
     xs_b = fitted_b['measures']
     ys_b = fitted_b['times']
-    gp.plot((xs_a, ys_a), (xs_b, ys_b), _with='lines', terminal='dumb 60,30',
-            unset='grid', title='Comparación', xlabel='n', ylabel='tiempo')
+
+    if importlib.util.find_spec('gnuplotlib') is not None:
+        import gnuplotlib as gp
+        gp.plot((xs_a, ys_a), (xs_b, ys_b), _with='lines', terminal='dumb 60,30',
+                unset='grid', title='Comparación', xlabel='n', ylabel='tiempo')
 
 
 def generar_aleatorio(n):
@@ -79,7 +85,6 @@ class PruebasBurbuja(unittest.TestCase):
         _comparar_curvas(fitted, fitted_o)
 
         self.assertLessEqual(fitted_o['times'][-1], fitted['times'][-1])
-
 
     def test_mejor_caso(self):
         self.fail('Pendiente de implementar')
