@@ -1,10 +1,8 @@
 attrs==19.3.0
 big-O-dmunguiatec==0.0.1
-gnuplotlib==0.32
 importlib-metadata==1.2.0
 more-itertools==8.0.2
 numpy==1.17.4
-numpysane==0.21
 packaging==19.2
 pluggy==0.13.1
 py==1.8.0

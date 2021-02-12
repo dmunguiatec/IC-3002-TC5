@@ -37,6 +37,10 @@ Instalar las dependencias
 pip3 install -r requirements.txt
 ```
 
+```bash
+pip3 install gnuplotlib
+```
+
 Ejecutar las pruebas
 
 ```bash
